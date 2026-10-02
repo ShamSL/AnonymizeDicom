@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+
+# IDE / tooling
+.vs/
+.idea/
+*.user
+*.suo
+
+# Logs
+*.log
+anonymizeDicom.log
+
+# Python venv (documentation tooling)
+.venv/

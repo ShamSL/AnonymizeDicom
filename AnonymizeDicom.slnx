@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AnonymizeDicom/AnonymizeDicom.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AnonymizeDicom.Tests/AnonymizeDicom.Tests.csproj" />
+  </Folder>
+</Solution>
