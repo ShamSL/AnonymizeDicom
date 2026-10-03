@@ -15,8 +15,7 @@ if (!Directory.Exists(options.InputFolder))
 
 Directory.CreateDirectory(options.OutputFolder);
 
-// DICOM files load their full pixel data into memory, so this work is memory-bound,
-// not CPU-bound. Cap concurrency to avoid multi-GB peak RAM on many-core machines.
+// DICOM work is memory-bound; cap concurrency.
 var parallelism = Math.Min(4, Math.Max(1, Environment.ProcessorCount));
 
 var profile = AnonymizationProfile.CreateDefault();

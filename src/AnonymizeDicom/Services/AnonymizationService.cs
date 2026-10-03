@@ -26,13 +26,6 @@ public sealed class AnonymizationService
         int maxDegreeOfParallelism,
         CancellationToken cancellationToken = default)
     {
-        if (!Directory.Exists(inputFolder))
-        {
-            throw new DirectoryNotFoundException($"Input folder not found: {inputFolder}");
-        }
-
-        Directory.CreateDirectory(outputFolder);
-
         var allFiles = Directory.GetFiles(inputFolder, "*", new EnumerationOptions
         {
             RecurseSubdirectories = true,
